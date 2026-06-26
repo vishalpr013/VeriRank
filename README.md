@@ -8,7 +8,6 @@ sdk_version: 4.36.1
 app_file: app.py
 pinned: false
 license: apache-2.0
-python_version: 3.11
 ---
 
 # VeriRank: Intelligent Candidate Discovery & Ranking System
@@ -21,7 +20,7 @@ Our pipeline implements a **Pre-computed Dense Retrieval + Heuristic Rescoring E
 
 ## 1. Executive Summary & Rationale
 
-*   **Execution Time**: Runs in **<3 seconds** on standard CPU (vs. 5-minute sandbox limit).
+*   **Execution Time**: Runs in **<8 seconds** on standard CPU (vs. 5-minute sandbox limit).
 *   **RAM Footprint**: Consumes **<100 MB** of memory (vs. 16 GB sandbox limit).
 *   **Safety & Compliance**: **100% network-independent** (no external API calls during ranking).
 *   **Honeypot Protection**: **0% honeypot rate** in the final shortlist (passes the <10% disqualification threshold).

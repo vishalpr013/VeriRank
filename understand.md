@@ -8,7 +8,7 @@ This document provides a comprehensive explanation of **what was built**, **how 
 
 We built **VeriRank**, a **Hybrid Dense Retrieval + Heuristic Rescoring Pipeline** to discover and rank the top 100 candidates for a **Senior AI Engineer — Founding Team** role from a pool of 100,000 profiles. 
 
-Our pipeline runs **100% offline**, consumes **<100 MB of RAM**, and completes in **<3 seconds on a single CPU**, compared to the hackathon limits of 16 GB RAM and 5 minutes execution time. It outputs a validated, compliant CSV file and includes zero honeypots (0.0% honeypot rate, passing the <10% disqualification threshold).
+Our pipeline runs **100% offline**, consumes **<100 MB of RAM**, and completes in **<8 seconds on a single CPU**, compared to the hackathon limits of 16 GB RAM and 5 minutes execution time. It outputs a validated, compliant CSV file and includes zero honeypots (0.0% honeypot rate, passing the <10% disqualification threshold).
 
 ---
 
@@ -60,7 +60,7 @@ We add or deduct points to reflect a recruiter's real hiring decisions:
 
 ### Q: Why pre-compute embeddings and JD vectors?
 *   Computing vector embeddings for 100,000 candidates takes ~50 minutes on a CPU.
-*   By pre-filtering down to 28K candidates and pre-computing the embeddings, the online ranking script only has to load the vectors and run a `numpy` dot-product. This reduces computation time from **50 minutes to <3 seconds**, ensuring we pass the Stage 3 sandbox reproduction test with ease.
+*   By pre-filtering down to 28K candidates and pre-computing the embeddings, the online ranking script only has to load the vectors and run a `numpy` dot-product. This reduces computation time from **50 minutes to <8 seconds**, ensuring we pass the Stage 3 sandbox reproduction test with ease.
 
 ### Q: Why use a programmatic reasoning generator instead of an LLM?
 *   LLMs are slow on CPU and prone to **hallucinations** (fabricating skills or degrees). If the reviewer samples a reasoning mentioning a skill not on the candidate's profile, the submission is flagged.
