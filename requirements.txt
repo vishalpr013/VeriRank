@@ -4,3 +4,4 @@ torch>=2.0.0
 tqdm>=4.60.0
 pandas
 huggingface_hub<1.0.0
+pydantic==2.8.2
