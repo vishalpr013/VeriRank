@@ -2,6 +2,5 @@ numpy>=1.20.0
 sentence-transformers>=2.2.0
 torch>=2.0.0
 tqdm>=4.60.0
-gradio>=4.43.0
 pandas
 huggingface_hub<1.0.0
