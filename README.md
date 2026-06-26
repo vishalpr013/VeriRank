@@ -8,6 +8,7 @@ sdk_version: 4.36.1
 app_file: app.py
 pinned: false
 license: apache-2.0
+python_version: 3.11
 ---
 
 # VeriRank: Intelligent Candidate Discovery & Ranking System
