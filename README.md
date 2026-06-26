@@ -1,3 +1,15 @@
+---
+title: VeriRank
+emoji: 🔍
+colorFrom: purple
+colorTo: pink
+sdk: gradio
+sdk_version: 4.36.1
+app_file: app.py
+pinned: false
+license: apache-2.0
+---
+
 # VeriRank: Intelligent Candidate Discovery & Ranking System
 
 This document outlines the architecture, setup instructions, design rationales, and execution commands for our **VeriRank** candidate ranking solution for the Redrob Data & AI Challenge. 
