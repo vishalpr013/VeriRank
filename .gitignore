@@ -1,0 +1,13 @@
+# Large dataset (exceeds GitHub limits)
+candidates.jsonl
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local environment and temp files
+.venv/
+env/
+venv/
+ENV/

@@ -1,0 +1,66 @@
+# Redrob Hackathon — Submission Metadata
+# ============================================================================
+# Team identity
+# ============================================================================
+team_name: "DevEnger"
+
+primary_contact:
+  name: "Vishal Prajapati"
+  email: "vishalprajapati9427@gmail.com"
+  phone: "+91-9898331569"
+
+team_members:
+  - name: "Vishal Prajapati"
+    email: "vishalprajapati9427@gmail.com"
+    role: "AI Engineer"
+
+
+# ============================================================================
+# Code and reproducibility
+# ============================================================================
+github_repo: "https://github.com/vishalpr013/VeriRank"
+sandbox_link: "https://huggingface.co/spaces/vishalpr013/VeriRank"
+reproduce_command: "python rank.py --candidates ./candidates.jsonl"
+
+
+# ============================================================================
+# Compute environment
+# ============================================================================
+compute:
+  platform: "Local Windows PC"
+  cpu_cores: 8
+  ram_gb: 16
+  python_version: "3.11.4"
+  os: "Windows 11"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: true
+  pre_computation_time_minutes: 12
+
+# ============================================================================
+# AI tools declaration
+# ============================================================================
+ai_tools_used:
+  - "Gemini"
+  - "Cursor"
+
+ai_usage_summary: |
+  Used Gemini for design planning, implementation planning, and code scaffolding.
+  Used Cursor to manage task checklists and refactor files.
+  No candidate data was transmitted to any external API during candidate ranking.
+
+# ============================================================================
+# Approach summary
+# ============================================================================
+methodology_summary: |
+  Hybrid Dense Retrieval + Heuristic Ranker. We run a high-recall pre-filter to narrow the candidate pool, then build a pre-computed vector index using all-MiniLM-L6-v2. During the ranking stage, we compute the cosine similarity between candidate profiles and the JD embedding vector in numpy (takes <0.5s for 100K candidates). We combine this with heuristic scoring for YoE, location matching, consulting company exclusions, and Redrob signals. Honeypots are filtered out automatically using a multi-point timeline anomaly check.
+
+# ============================================================================
+# Declarations
+# ============================================================================
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true
+  reproduction_tested: true
